@@ -1,0 +1,200 @@
+/* Custom CSS variables for black, white, and orange theme */
+:root {
+    /* DEFAULT THEME (Black Background) */
+    --color-bg-main: #000;
+    --color-bg-section: #111;
+    --color-text-main: white;
+    --color-accent: green; /* Bright Orange */
+    --color-border: #333;
+    --color-code-bg: #222;
+    --color-shadow: rgba(255, 255, 255, 0.15);
+}
+
+/* TOGGLED THEME (White Background) - Inverted colors */
+.dark {
+    --color-bg-main: white;
+    --color-bg-section: #f9f9f9;
+    --color-text-main: black;
+    --color-accent: #ff9900; /* Orange remains consistent */
+    --color-border: #ddd;
+    --color-code-bg: #eeeeee;
+    --color-shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding-top: 60px; /* Space for fixed navbar */
+    
+    /* Apply variables */
+    background-color: var(--color-bg-main);
+    color: var(--color-text-main);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* === NAV BAR STYLES === */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: var(--color-bg-section);
+    box-shadow: 0 2px 4px var(--color-shadow);
+    border-bottom: 1px solid var(--color-border);
+    z-index: 100;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--color-accent); /* Orange Brand Text */
+}
+
+.navbar-links a {
+    color: var(--color-text-main);
+    text-decoration: none;
+    margin-left: 25px;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+.navbar-links a:hover {
+    color: var(--color-accent); /* Orange on hover */
+    border-bottom-color: var(--color-accent); /* Orange underline */
+}
+
+/* === THEME CHANGER BUTTON STYLES === */
+.changeUI {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    transition: transform 0.2s;
+}
+.changeUI svg path {
+    fill: var(--color-text-main); 
+    transition: fill 0.3s;
+}
+
+.changeUI:hover {
+    transform: scale(1.1);
+}
+
+/* === HEADER/SECTION STYLES === */
+.page-header {
+    background-color: var(--color-accent); /* Orange background */
+    color: black; /* Black text on orange */
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px var(--color-shadow);
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.subtitle {
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: var(--color-bg-section);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px var(--color-shadow);
+    border: 1px solid var(--color-border);
+}
+
+.section h2 {
+    color: var(--color-accent); /* Orange headings */
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.section h3 {
+    color: var(--color-text-main);
+    margin-top: 25px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+pre {
+    background-color: var(--color-code-bg);
+    border: 1px solid var(--color-border);
+    padding: 15px;
+    overflow-x: auto;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    word-break: break-all;
+    color: var(--color-text-main);
+}
+
+code {
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9em;
+}
+
+/* === ANIMATION SECTION SPECIFIC STYLES === */
+.font-30 { font-size: 30px; } 
+.transition-all { transition: all 0.3s ease-in-out; }
+.cursor-pointer { cursor: pointer; }
+
+.animation-example {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    min-height: 80px;
+}
+
+.animation-example-move-container {
+    position: relative;
+    border: 1px dashed var(--color-accent);
+    height: 150px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.move-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 12px;
+}
+
+/* FOOTER STYLES */
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 1px solid var(--color-border);
+    font-size: 0.9em;
+    color: var(--color-text-main);
+}
+
+.footer a {
+    color: var(--color-accent); /* Orange link color */
+    text-decoration: none;
+}
