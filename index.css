@@ -209,23 +209,23 @@ code {
 .text-ciao {
     font-size: 10em; /* Large size */
     font-weight: 900;
-    color: #a4fcfd; /* Base color of the text */
+    color: var(--color-bg-main); /* Base color of the text */
     text-transform: uppercase;
     
     /* The core neon glow effect */
     text-shadow: 
-        0 0 10px #4dffff, /* Inner bright glow */
-        0 0 20px #4dffff,
-        0 0 40px #00e5ff, /* Outer, softer glow */
-        0 0 80px #00bfff,
-        0 0 120px #00bfff;
+        0 0 10px var(--color-text-main), /* Inner bright glow */
+        0 0 20px var(--color-text-main),
+        0 0 40px var(--color-text-main), /* Outer, softer glow */
+        0 0 80px var(--color-text-main),
+        0 0 120px var(--color-text-main);
     
     animation: 
         flicker-blue 2s infinite alternate, /* Flickering effect */
         pulse-blue 6s infinite ease-in-out; /* Slow pulsing/breathing effect */
     
     /* Make sure the text looks 'outset' like a neon tube */
-    border: 3px solid #a4fcfd;
+    border: 3px solid var(--color-bg-main);
     padding: 0 20px;
     border-radius: 5px;
     display: inline-block; /* Essential for border */
