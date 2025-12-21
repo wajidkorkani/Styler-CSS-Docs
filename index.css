@@ -201,8 +201,14 @@ code {
 
 /* Container for positioning */
 .neon-container {
+    /* height: 400px; */
     text-align: center;
-    line-height: 1; /* Adjust vertical spacing */
+    /* line-height: 1; Adjust vertical spacing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 10px;
 }
 
 /* --- CIAO Style (Blue/Cyan Neon) --- */
@@ -225,22 +231,22 @@ code {
         pulse-blue 6s infinite ease-in-out; /* Slow pulsing/breathing effect */
     
     /* Make sure the text looks 'outset' like a neon tube */
-    border: 3px solid var(--color-bg-main);
-    padding: 0 20px;
-    border-radius: 5px;
-    display: inline-block; /* Essential for border */
+    /* border: 3px solid var(--color-bg-main); */
+    /* padding: 0 10px; */
+    /* border-radius: 5px; */
+    /* display: inline-block; Essential for border */
 }
 
 /* --- Bella Style (Magenta/Pink Cursive) --- */
 .text-bella {
-    font-size: 8em;
-    font-weight: 400;
+    font-size: 10em;
+    font-weight: 900;
     font-family: 'Brush Script MT', 'cursive', sans-serif; /* Cursive/script font */
     color: var(--color-accent); /* Base color of the text */
     /* Position the 'bella' text right below 'ciao' and slightly to the right */
-    position: relative;
-    top: -90px; /* Pull it up a bit */
-    right: -100px; /* Move it to the right */
+    /* position: relative; */
+    /* top: -90px;  */
+    /* right: -100px; */
 
     /* The core neon glow effect */
     text-shadow: 
@@ -260,6 +266,15 @@ code {
    ======================================= */
 
 /* 1. FAST FLICKERING EFFECT (creates the random 'on/off' look) */
+
+.text-bella{
+    margin: 0;
+}
+
+.text-ciao{
+    margin: 0;
+    margin-top: 10px;
+}
 
 @keyframes flicker-blue {
     0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
