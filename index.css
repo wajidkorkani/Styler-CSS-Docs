@@ -367,3 +367,52 @@ code {
 .animated-border:hover {
     transform: translateY(-5px);
 }
+
+
+/* === FIRE SNAKE BORDER ANIMATION === */
+
+.fire-border-card {
+    position: relative;
+    padding: 20px;
+    background: var(--color-bg-section); /* Matches your section bg */
+    border-radius: 10px;
+    overflow: hidden; /* Clips the rotating fire gradient */
+    z-index: 1;
+}
+
+.fire-border-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    /* Fire colors: Red, Orange, Yellow, then back to transparent/dark */
+    background: conic-gradient(
+        transparent, 
+        #ff0000, 
+        #ff8c00, 
+        #ffcc00, 
+        transparent 30%
+    );
+    animation: rotate-fire 4s linear infinite;
+    z-index: -2;
+}
+
+.fire-border-card::after {
+    content: '';
+    position: absolute;
+    inset: 3px; /* This controls the thickness of the border */
+    background: var(--color-bg-section);
+    border-radius: 8px;
+    z-index: -1;
+}
+
+@keyframes rotate-fire {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
