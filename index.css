@@ -339,3 +339,31 @@ code {
         filter: brightness(0.95);
     }
 }
+
+/* === BORDER ANIMATION === */
+
+@keyframes border-glow {
+    0% {
+        border-color: var(--color-border);
+        box-shadow: 0 0 5px rgba(255, 165, 0, 0.2);
+    }
+    50% {
+        border-color: var(--color-accent); /* Orange */
+        box-shadow: 0 0 20px rgba(255, 165, 0, 0.6);
+    }
+    100% {
+        border-color: var(--color-border);
+        box-shadow: 0 0 5px rgba(255, 165, 0, 0.2);
+    }
+}
+
+.animated-border {
+    border: 2px solid var(--color-border); /* Starting state */
+    animation: border-glow 3s infinite ease-in-out;
+    transition: transform 0.3s ease;
+}
+
+/* Optional: Slight lift effect when hovering over animated sections */
+.animated-border:hover {
+    transform: translateY(-5px);
+}
