@@ -279,11 +279,11 @@ code {
 @keyframes flicker-blue {
     0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
         text-shadow: 
-            0 0 10px #4dffff,
-            0 0 20px #4dffff,
-            0 0 40px #00e5ff,
-            0 0 80px #00bfff,
-            0 0 120px #00bfff;
+            0 0 10px orangered,
+            0 0 20px red,
+            0 0 40px rgb(245, 0, 29),
+            0 0 80px orange,
+            0 0 120px purple;
         opacity: 1;
     }
     20%, 24%, 55% {
@@ -415,4 +415,8 @@ code {
     to {
         transform: rotate(360deg);
     }
+}
+
+.bg-shadow{
+    box-shadow: 1px 2px 50px 4px rgb(31, 31, 31);
 }
