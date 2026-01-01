@@ -227,27 +227,15 @@ code {
         0 0 120px var(--color-text-main);
     
     animation: 
-        flicker-blue 2s infinite alternate, /* Flickering effect */
-        pulse-blue 6s infinite ease-in-out; /* Slow pulsing/breathing effect */
-    
-    /* Make sure the text looks 'outset' like a neon tube */
-    /* border: 3px solid var(--color-bg-main); */
-    /* padding: 0 10px; */
-    /* border-radius: 5px; */
-    /* display: inline-block; Essential for border */
+        flicker-blue 2s infinite alternate,
+        pulse-blue 6s infinite ease-in-out;
 }
 
-/* --- Bella Style (Magenta/Pink Cursive) --- */
 .text-bella {
     font-size: 10em;
     font-weight: 900;
-    font-family: 'Brush Script MT', 'cursive', sans-serif; /* Cursive/script font */
-    color: var(--color-accent); /* Base color of the text */
-    /* Position the 'bella' text right below 'ciao' and slightly to the right */
-    /* position: relative; */
-    /* top: -90px;  */
-    /* right: -100px; */
-
+    font-family: 'Brush Script MT', 'cursive', sans-serif;
+    color: var(--color-accent);
     /* The core neon glow effect */
     text-shadow: 
         0 0 5px #ff66ff, /* Inner bright glow */
