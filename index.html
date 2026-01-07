@@ -6,13 +6,6 @@
     <title>Styler CSS Documentation</title>
     <link rel="stylesheet" href="../Src/styler.css">
     <link rel="stylesheet" href="index.css">
-    <script>
-
-        if (localStorage.getItem('theme') === 'dark' || 
-           (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !localStorage.getItem('theme'))) {
-            document.body.classList.add('dark');
-        }
-    </script>
 </head>
 <body>
     <nav class="navbar">
@@ -142,5 +135,12 @@
     <script src="../Src/media_query.js"></script>
     <script src="../Src/styler.js"></script>
     <script src="../Src/themeChanger.js"></script>
+        <script>
+
+        if (localStorage.getItem('theme') === 'dark' || 
+           (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !localStorage.getItem('theme'))) {
+            document.body.classList.add('dark');
+        }
+    </script>
 </body>
 </html>
