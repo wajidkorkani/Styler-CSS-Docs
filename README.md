@@ -1,2 +1,2 @@
 # Styler-CSS-Docs
-Styler CSS Documentation
+Styler CSS Documentation Website
