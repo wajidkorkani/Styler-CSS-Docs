@@ -1,6 +1,6 @@
 # Styler CSS Docs
 
-A small documentation/demo site for the `Styler` CSS utilities. This project showcases a set of CSS helpers and interactive examples (flex, grid, hover, media queries, and theming) with a minimal JavaScript layer for demos.     
+A small documentation/demo site for the `Styler CSS` utilities. This project showcases a set of CSS helpers and interactive examples (flex, grid, hover, media queries, and theming) with a minimal JavaScript layer for demos.     
 
 ## Quick Start
 
