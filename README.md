@@ -7,10 +7,8 @@ A small documentation/demo site for the `Styler CSS` utilities. This project sho
 - Open the demo in your browser: open [index.html](index.html)
 - No build step required  this is static HTML/CSS/JS.    
 
-## Whats Included
+## Whats Included in Styler CSS
 
-- `index.html`: Main demo page
-- `index.css`: Global demo stylesheet
 - `Src/`: Source files for demo features
   - `flex.js`  Flexbox example interactions
   - `grid.js`  Grid example interactions
@@ -20,11 +18,6 @@ A small documentation/demo site for the `Styler CSS` utilities. This project sho
   - `styler.css`  The CSS utility library showcased      
   - `styler.js`  Small JS helper for the utilities       
   - `themeChanger.js`  Theme toggling script
-
-## Usage
-
-1. Open `index.html` in a browser (double-click or File  Open).
-2. Interact with the examples to see the utility classes and scripts in action.
 
 ## Development
 
